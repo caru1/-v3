@@ -1,5 +1,6 @@
 import discord
 import random
+import os
 
 client = discord.Client()
 token = "ODA1NTkxMDcwOTEzMzMxMjUx.YBdHJg.A50KOV3qHtgeiKS_mUUjIU_woHk"
@@ -55,4 +56,5 @@ async def on_message(message):
                 await message.channel.send("보!")
                 await message.channel.send("비겼어..ㅠ")
 
-client.run(token)
+access_token = os.environ["BOT_TOKEN"]                
+client.run(access_token)
